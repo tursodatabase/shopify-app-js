@@ -12,12 +12,12 @@ import {
   QueryResultHKT as PgDatabaseQueryResultHKT,
 } from 'drizzle-orm/pg-core';
 
-import {PgSessionTable} from '../schemas/pg.schema';
+import {PostgresSessionTable} from '../schemas/postgres.schema';
 
 export class DrizzleSessionStoragePostgres implements SessionStorage {
   constructor(
     private readonly db: PgDatabase<PgDatabaseQueryResultHKT, any>,
-    private readonly sessionTable: PgSessionTable,
+    private readonly sessionTable: PostgresSessionTable,
   ) {}
 
   public async storeSession(session: Session): Promise<boolean> {
@@ -91,7 +91,9 @@ export class DrizzleSessionStoragePostgres implements SessionStorage {
     return sessions.map((session) => this.rowToSession(session));
   }
 
-  private sessionToRow(session: Session): InferInsertModel<PgSessionTable> {
+  private sessionToRow(
+    session: Session,
+  ): InferInsertModel<PostgresSessionTable> {
     return {
       id: session.id,
       shop: session.shop,
@@ -106,7 +108,7 @@ export class DrizzleSessionStoragePostgres implements SessionStorage {
     };
   }
 
-  private rowToSession(row: InferSelectModel<PgSessionTable>): Session {
+  private rowToSession(row: InferSelectModel<PostgresSessionTable>): Session {
     const sessionParams: {[key: string]: boolean | string | number} = {
       id: row.id,
       shop: row.shop,

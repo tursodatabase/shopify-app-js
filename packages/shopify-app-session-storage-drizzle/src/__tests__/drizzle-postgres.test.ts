@@ -18,7 +18,7 @@ import {
 } from 'drizzle-orm/pg-core';
 import pg from 'pg';
 
-import {DrizzleSessionStoragePostgres} from '../adapters/drizzle-pg.adapter';
+import {DrizzleSessionStoragePostgres} from '../adapters/drizzle-postgres.adapter';
 
 const exec = promisify(child_process.exec);
 
@@ -39,7 +39,7 @@ export const sessionTable = pgTable('session' as string, {
   userId: bigint('userId', {mode: 'bigint'}),
 });
 
-describe('DrizzlePgSessionStorage', () => {
+describe('DrizzleSessionStoragePostgres', () => {
   let drizzleDb: PgDatabase<QueryResultHKT>;
   let containerId: string;
   let client: pg.Client;
