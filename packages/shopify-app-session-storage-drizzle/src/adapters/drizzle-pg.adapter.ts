@@ -14,13 +14,9 @@ import {
 
 import {PgSessionTable} from '../schemas/pg.schema';
 
-export class DrizzlePgAdapter<
-  T extends PgDatabase<PgDatabaseQueryResultHKT, TSchema>,
-  TSchema extends {[key: string]: unknown} = {[key: string]: unknown},
-> implements SessionStorage
-{
+export class DrizzleSessionStoragePostgres implements SessionStorage {
   constructor(
-    private readonly db: T,
+    private readonly db: PgDatabase<PgDatabaseQueryResultHKT, any>,
     private readonly sessionTable: PgSessionTable,
   ) {}
 
