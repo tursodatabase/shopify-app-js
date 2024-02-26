@@ -3184,21 +3184,6 @@
     react-is "^18.0.0"
     react-reconciler "^0.28.0"
 
-"@shopify/shopify-api@^9.0.1":
-  version "9.2.0"
-  resolved "https://registry.yarnpkg.com/@shopify/shopify-api/-/shopify-api-9.2.0.tgz#8a552fc63a578fdb0b58261fefdc7b87f10065a6"
-  integrity sha512-rHAKzMO2AQLf+UkjG0x6TUNga/LcAPM3gd3ANCx/yFxKSYvyaJDeVdkgidt5GNjl7UacWkICTr9Tc4XFgmFDng==
-  dependencies:
-    "@shopify/admin-api-client" "^0.2.3"
-    "@shopify/network" "^3.2.1"
-    "@shopify/storefront-api-client" "^0.2.3"
-    compare-versions "^5.0.3"
-    isbot "^4.4.0"
-    jose "^5.2.0"
-    node-fetch "^2.6.1"
-    tslib "^2.0.3"
-    uuid "^9.0.0"
-
 "@shopify/shopify-api@^9.3.2":
   version "9.3.2"
   resolved "https://registry.yarnpkg.com/@shopify/shopify-api/-/shopify-api-9.3.2.tgz#88237dc44377bafa0a3177881e225e794c80fd70"
@@ -5119,11 +5104,6 @@ commondir@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/commondir/-/commondir-1.0.1.tgz#ddd800da0c66127393cca5950ea968a3aaf1253b"
   integrity sha512-W9pAhw0ja1Edb5GVdIF1mjZw/ASI0AlShXM83UUGe2DVr5TdAPEA1OA8m/g8zWp9x6On7gqufY+FatDbC3MDQg==
-
-compare-versions@^5.0.3:
-  version "5.0.3"
-  resolved "https://registry.yarnpkg.com/compare-versions/-/compare-versions-5.0.3.tgz#a9b34fea217472650ef4a2651d905f42c28ebfd7"
-  integrity sha512-4UZlZP8Z99MGEY+Ovg/uJxJuvoXuN4M6B3hKaiackiHrgzQFEe3diJi1mf1PNHbFujM7FvLrK2bpgIaImbtZ1A==
 
 compare-versions@^6.1.0:
   version "6.1.0"
